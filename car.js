@@ -10,24 +10,29 @@
 // In the main.js file, be sure to require the module and console log a message about your car object, including the current speed of the car.
 
 
-
 var Car = function (color, convertible, speed) {
   this.color = color
   this.convertible = convertible
   this.speed = 0
 
   this.decelerate = function(lessSpeed) {
-    var currentSpeed = this.speed
-    var newSpeed = this.speed - lessSpeed
-    return this.speed = newSpeed
+    // var currentSpeed = this.speed
+    // var newSpeed = this.speed - lessSpeed
+    // return this.speed = newSpeed
+    this.speed -= lessSpeed
   }
+
   this.acelerate = function(addSpeed) {
-    var currentSpeed = this.speed
-    var newSpeed = this.speed + addSpeed
-    return this.speed = newSpeed
+    // var currentSpeed = this.speed
+    // var newSpeed = this.speed + addSpeed
+    // return this.speed = newSpeed
+    this.speed += addSpeed
   }
 }
 
+Car.prototype.setColor = function(newColor){
+  this.color = newColor
+}
 
 
 
